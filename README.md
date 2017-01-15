@@ -27,7 +27,7 @@ function RandomSelect()
 	show="米制: "+c;
 	names.splice(a,1);
 	document.getElementById("demo").innerHTML=show;
-	document.getElementById("demo2").innerHTML="英制";
+	document.getElementById("demo2").innerHTML="请点击答案";
 }
 function displayAnswer()
 {	

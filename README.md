@@ -47,12 +47,12 @@ function displayAnswer()
 			<table width="100%" height="100%">
 				<tr>
 					<td align="center">
-						<h1>抽奖</h1>
-						<p id="demo">等待点击</p>
-						<button type="button" onclick="RandomSelect()">开始出题									</button>
-						<button type="button" onclick="displayAnswer()">显示答案
+						<h1>米制高度层</h1>
+						<p id="demo">请点击开始</p>
+						<button type="button" onclick="RandomSelect()">开始									</button>
+						<button type="button" onclick="displayAnswer()">答案
 						</button>
-						<p id="demo2">暂无</p>
+						<p id="demo2">请点击答案</p>
 					</td>
 				</tr>
 			</table>

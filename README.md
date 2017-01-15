@@ -1,37 +1,62 @@
-## Welcome to GitHub Pages
-
-You can use the [editor on GitHub](https://github.com/Marriobin/BIN/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Marriobin/BIN/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+<html>
+<head>
+<script charset="UTF-8">
+//在下面的括号内写入抽签内容，每个内容需要用双引号包括
+var names=new Array(
+	"1","2","3","4","5","6","7","8"
+	);
+var answers=new Array(
+	"赵","钱","孙","李","鸡","毛","蒜","皮"
+	);
+var dic=new Array();
+for(i=0;i<names.length;i++){
+	dic[names[i]]=answers[i];
+}
+var c;//a表示dic中的键值
+function RandomSelect()
+{	
+	if(names.length==0){
+		c="Null";
+		show="没有了";
+		document.getElementById("demo").innerHTML=show;
+		document.getElementById("demo2").innerHTML="没有了";
+		return;
+	}
+	var a=parseInt(Math.random(0)*(names.length));
+	c=names[a];
+	show="序号: "+c;
+	names.splice(a,1);
+	document.getElementById("demo").innerHTML=show;
+	document.getElementById("demo2").innerHTML="暂无";
+}
+function displayAnswer()
+{	
+	if(c=="Null")
+	{
+		document.getElementById("demo2").innerHTML="没有了";
+		return;
+	}
+	var ans=dic[c];
+	answer="答案："+ans;
+	document.getElementById("demo2").innerHTML=answer;
+}
+</script>
+</head>
+	<body>
+		<div id="box">
+			<table width="100%" height="100%">
+				<tr>
+					<td align="center">
+						<h1>抽奖</h1>
+						<p id="demo">等待点击</p>
+						<button type="button" onclick="RandomSelect()">开始抽奖
+						</button>
+						<button type="button" onclick="displayAnswer()">显示答案
+						</button>
+						<p id="demo2">暂无</p>
+					</td>
+				</tr>
+			</table>
+		<div>
+	</body>
+</html>

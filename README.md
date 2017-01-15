@@ -24,10 +24,10 @@ function RandomSelect()
 	}
 	var a=parseInt(Math.random(0)*(names.length));
 	c=names[a];
-	show="序号: "+c;
+	show="米制: "+c;
 	names.splice(a,1);
 	document.getElementById("demo").innerHTML=show;
-	document.getElementById("demo2").innerHTML="暂无";
+	document.getElementById("demo2").innerHTML="英制";
 }
 function displayAnswer()
 {	
@@ -37,7 +37,7 @@ function displayAnswer()
 		return;
 	}
 	var ans=dic[c];
-	answer="答案："+ans;
+	answer="英制："+ans;
 	document.getElementById("demo2").innerHTML=answer;
 }
 </script>

@@ -54,9 +54,11 @@ function displayAnswer()
 						</button>
 						<p id="demo2">请点击答案</p>
 						<p1>陶文彬编制
-						</p1>
+						</p1><hr />
 						<p2>特别感谢戴朱涛同学提供技术支持
-						</p2>
+						</p2><hr />
+						<p3>彬彬集团2017
+						</p3><hr />
 					</td>
 				</tr>
 			</table>
